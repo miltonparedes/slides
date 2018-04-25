@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Purpurite project</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="./../../../assets/css/reveal.css">
+		<link rel="stylesheet" href="./../../../assets/css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="./../../../assets/lib/css/zenburn.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Roboto" rel="stylesheet">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? './../../../assets/css/print/pdf.css' : './../../../assets/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+    <style>
+    .reveal h1{
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+    }
+    .reveal h2{
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+    }
+    .reveal h3{
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+    }
+    .reveal .logo{
+      text-transform: inherit;
+    }
+  </style>
+	</head>
+
+	<body>
+
+    <div class="reveal">
+      <div class="slides">
+        <section id="home" data-background="#442178">
+          <h1 class="logo">Purpurite project</h1>
+          <h3 class="logo">Simple, potente y ridículamente veloz.</h2>
+        </section>
+        <section id="software" data-background="#AA87DE">
+          <h3 class="logo">Desarrollo de software por etapas</h3>
+          <ol>
+            <li><strike>Plan operativo.</strike></li>
+            <li><strike>Especificación de requisitos.</strike></li>
+            <li class="fragment"><strike>Especificación funcional.</strike></li>
+            <li class="fragment">Diseño.</li>
+            <li class="fragment">Implementación.</li>
+            <font color="#765d9a"><li class="fragment">Integración.</li></font>
+            <font color="#765d9a"><li class="fragment">Validación y verificación.</li></font>
+            <font color="#765d9a"><li class="fragment">Mantenimiento.</li></font>
+          </ol>
+        </section>
+        <section id="what-is" data-background="#7137c8">
+          <h2 class="logo">¿Qué es purpurite?</h2>
+          <p>
+            Cuando se trata de crear sitios web, hay una cantidad ridícula de herramientas disponibles. Van desde soluciones de gestión de contenido completas como Wordpress, soluciones de escritorio como Google Web Designer, soluciones de sitios web alojados en la nube como WIX o enfoques más centrados en programadores como Jekyll que generan sitios web de plantillas y archivos markdown.
+          </p>
+          <hr>
+          <p>
+            Purpurite es diferente a cualquiera de estas.
+          </p>
+        </section>
+        <section id="static" data-background="#8d5fd3">
+          <h3  class="logo">Purpurite es un generador estático</h3>
+          <p>
+            La gran mayoría de los sitios web se leerán muchas más veces de las que se actualizarán. Esto es crucial porque el contenido dinámico no es gratis.
+          </p>
+        </section>
+        <section id="cms" data-background="#c6afe9">
+          <h3 class="logo">Purpurite es un CMS</h3>
+          <p>
+            Purpurite proporciona una interfaz de administrador flexible desde un navegador, desde la que puede editar los contenidos de su sitio web. A diferencia de las soluciones CMS tradicionales, purpurite se ejecuta completamente en su propia computadora.
+          </p>
+        </section>
+        <section id="framework" data-background="#5a2ca0">
+          <h3 class="logo">Purpurite es un framework</h3>
+          <p>
+            <small>
+              Purpurite es mucho más que un generador de sitios web porque se basa en una base de datos de archivos planos internos muy flexible que se puede usar para modelar cualquier contenido de un sitio web.
+            </small>
+          </p>
+          <img src="templates.png" alt="">
+        </section>
+        <section id="multi-user" data-background="#5a2ca0">
+          <h3 class="logo">Purpurite es "multi-usuario"</h3>
+          <p>
+            La colaboración puede basarse en sistemas de control de versiones como git o simplemente en soluciones básicas de alamacenamiento en la nuebe. Está construido intencionalmente para que la colaboración pueda funcionar a través de los sistemas muy básicos como Dropbox o con solo recursos compartidos de red.
+          </p>
+        </section>
+        <section id="cli" data-background="#5a2ca0">
+          <h3 class="logo">CLI</h3>
+          <p>
+            Es un método que permite a los usuarios dar instrucciones a algún programa informático por medio de una línea de texto simple.
+          </p>
+          <pre><code class="hljs" style="background: #170b28;">
+~ $ purpurite serve
+Generating...
+Server address: http://localhost:8000/
+Server running... press ctrl-c to stop.
+
+~ $ purpurite --help
+Options:
+  serve            generate site on local server
+  --help           Show this message and exit.
+          </code></pre>
+        </section>
+        <section id="end" data-background="#442178">
+          <h1 class="logo">Dudas y comentarios</h1>
+        </section>
+      </div>
+    </div>
+
+		<script src="./../../../assets/lib/js/head.min.js"></script>
+		<script src="./../../../assets/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: './../../../assets/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: './../../../assets/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './../../../assets/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './../../../assets/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: './../../../assets/plugin/search/search.js', async: true },
+					{ src: './../../../assets/plugin/zoom-js/zoom.js', async: true },
+					{ src: './../../../assets/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+	</body>
+</html>
