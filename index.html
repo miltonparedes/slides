@@ -22,7 +22,7 @@ layout: default
       {% assign myCategory = category %}
     {% endif %}
     {% if page.category == category %}
-    <li><a href="{{ page.url }}" target="_blank">{{ page.title }}</a></li>
+    <li><a href="{{ site.url }}{{ page.url }}" target="_blank">{{ page.title }}</a></li>
     {% endif %}
   {% endif %}
 {% endfor %}
