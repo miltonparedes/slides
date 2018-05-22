@@ -1,0 +1,99 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ site.url }}/assets/css/reveal.css">
+<link rel="stylesheet" href="{{ site.url }}/assets/css/theme/black.css" id="theme">
+
+<!-- Theme used for syntax highlighting of code -->
+<link rel="stylesheet" href="{{ site.url }}/assets/lib/css/zenburn.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Roboto" rel="stylesheet">
+
+<!-- Printing and PDF exports -->
+<script>
+  var link = document.createElement( 'link' );
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = window.location.search.match( /print-pdf/gi ) ? '{{ site.url }}/assets/css/print/pdf.css' : '{{ site.url }}/assets/css/print/paper.css';
+  document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+
+<!--[if lt IE 9]>
+<script src="{{ site.url }}/lib/js/html5shiv.js"></script>
+<![endif]-->
+<style>
+.reveal h1{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.reveal h2{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.reveal h3{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.reveal .logo{
+  text-transform: inherit;
+}
+.reveal section img{
+margin: 0;
+background: transparent;
+border: 0;
+box-shadow: none;
+}
+#left {
+  left:-8.33%;
+  text-align: left;
+  float: left;
+  width:30%;
+  z-index:-10;
+}
+
+#right {
+  left:31.25%;
+  top: 75px;
+  float: right;
+  text-align: right;
+  z-index:-10;
+  width:70%;
+}
+</style>
+</head>
+
+<body>
+
+<div class="reveal">
+  <div class="slides">
+    {{ content }}
+  </div>
+</div>
+
+<script src="{{ site.url }}/assets/lib/js/head.min.js"></script>
+<script src="{{ site.url }}/assets/js/reveal.js"></script>
+
+<script>
+
+  // More info https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+      { src: '{{ site.url }}/assets/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: '{{ site.url }}/assets/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '{{ site.url }}/assets/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '{{ site.url }}/assets/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: '{{ site.url }}/assets/plugin/search/search.js', async: true },
+      { src: '{{ site.url }}/assets/plugin/zoom-js/zoom.js', async: true },
+      { src: '{{ site.url }}/assets/plugin/notes/notes.js', async: true }
+    ]
+  });
+
+</script>
+</body>

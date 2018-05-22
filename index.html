@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<style media="screen">
+.reveal a {
+  color: inherit;
+}
+</style>
+<section id="home">
+  <h1>My slides</h1>
+  <hr>
+  <h3>Milton Olaf Paredes</h3>
+{% for page in site.pages %}
+  {% if page.category %}
+    {% assign category = page.category %}
+    {% if category != myCategory %}
+      {% unless forloop.first %}</section>{% endunless %}
+      {% assign id_category = category | replace: " ", "-" %}
+      {% assign info_category = site.data.categories[id_category] %}
+      <section id="{{ id_category }}" data-background="{{ info_category.color }}">
+        <h4>{{ category }}</h4>
+      {% assign myCategory = category %}
+    {% endif %}
+    {% if page.category == category %}
+    <li><a href="{{ page.url }}" target="_blank">{{ page.title }}</a></li>
+    {% endif %}
+  {% endif %}
+{% endfor %}
