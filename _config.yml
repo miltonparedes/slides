@@ -2,16 +2,6 @@ title: Slides
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://miltonolaf.com/slides" # the base hostname & protocol for your site, e.g. http://example.com
 
-# Compress html
-compress_html:
-  clippings: all
-  comments: ["<!-- ", " -->"]
-  endings: all
-  ignore:
-    envs: [local]
-  blanklines: false
-  startings: [html, head, body]
-
 # Build settings
 markdown: kramdown
 theme: minima
