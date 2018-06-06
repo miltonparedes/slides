@@ -1,0 +1,12 @@
+.reveal .head{
+  text-transform: inherit;
+  text-align: right;
+}
+.reveal .comment{
+  font-family: monospace;
+  font-weight: lighter;
+  font-style: italic;
+  text-transform: lowercase;
+  text-align: left;
+  color: #bbb;
+}
