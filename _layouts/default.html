@@ -12,9 +12,6 @@
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="{{ site.url }}/assets/lib/css/zenburn.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Roboto" rel="stylesheet">
-    {% if page.style %}
-    <link rel="stylesheet" href="{{ site.url }}{{ page.url }}style.css">
-    {% endif %}
     <!-- Printing and PDF exports -->
     <script>
       var link = document.createElement( 'link' );
@@ -66,6 +63,9 @@
         width:70%;
       }
     </style>
+		{% if page.style %}
+		<link rel="stylesheet" href="{{ site.url }}{{ page.url }}style.css">
+		{% endif %}
   </head>
   <body>
     <div class="reveal">
@@ -95,5 +95,6 @@
         ]
       });
     </script>
+		<svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1"><defs><filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"></feColorMatrix><feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite></filter></defs></svg>
   </body>
 </html>
