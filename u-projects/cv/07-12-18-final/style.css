@@ -1,0 +1,43 @@
+.reveal .slide-background.present{
+	background: url(bg.jpg) rgba(4, 19, 33, 0.65);
+	background-size: cover;
+	background-blend-mode: soft-light;
+}
+.reveal .head{
+	text-transform: inherit;
+	text-align: right;
+	line-height: 1.4;
+}
+.reveal .comment{
+	font-family: monospace;
+	font-weight: lighter;
+	font-style: italic;
+	text-transform: inherit;
+	text-align: left;
+	color: #bbb;
+}
+
+.reveal h4.comment{
+	font-style: normal;
+	font-size: 2rem;
+}
+.reveal #applied .comment{
+	font-style: normal;
+}
+.reveal #ml-model i{
+	font-weight: bold;
+	color: #FFF;
+}
+.reveal .mark {
+	background: #000;
+	filter: url("#goo");
+	padding: 7px 13px 5px;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+.reveal .mb{
+	margin-bottom: 3rem;
+}
+#left, #right{
+  width: 50%;
+}
