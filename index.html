@@ -1,25 +1,18 @@
 ---
-layout: default
+layout: home
 title: Index
 ---
-<style media="screen">
-.reveal a {
-  color: inherit;
-}
-</style>
-<section id="home">
-  <h1>My slides</h1>
-  <hr>
-  <h3>Milton Olaf Paredes</h3>
-{% for page in site.pages %}
+{% assign sorted = site.pages | sort: 'date' | reverse %}
+{% for page in sorted %}
   {% if page.category %}
     {% assign category = page.category %}
     {% if category != myCategory %}
-      {% unless forloop.first %}</section>{% endunless %}
+      {% unless forloop.first %}</ul></ul><hr>{% endunless %}
       {% assign id_category = category | replace: " ", "-" %}
       {% assign info_category = site.data.categories[id_category] %}
-      <section id="{{ id_category }}" data-background="{{ info_category.color }}">
+      <ul>
         <h4>{{ category }}</h4>
+        <ul>
       {% assign myCategory = category %}
     {% endif %}
     {% if page.category == category %}
