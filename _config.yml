@@ -1,6 +1,6 @@
 title: Slides
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://slides.miltonolaf.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://miltonolaf.com/slides" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
