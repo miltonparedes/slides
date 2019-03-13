@@ -3,10 +3,30 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://miltonolaf.com/slides" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
+collections:
+  slides:
+    output: true
+    permalink: /:categories/:year/:month/:title/
+
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
+
+highlighter: none
+kramdown:
+   syntax_highlighter_opts:
+      disable : true
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: slides
+    values:
+      layout: slide
+      theme: black
+      syntax_theme: atom-one-dark
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
