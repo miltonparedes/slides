@@ -2,7 +2,7 @@
 layout: home
 title: Index
 ---
-{% assign sorted = site.pages | sort: 'date' | reverse %}
+{% assign sorted = site.slides | sort: 'date' | reverse %}
 {% for page in sorted %}
   {% if page.category %}
     {% assign category = page.category %}
